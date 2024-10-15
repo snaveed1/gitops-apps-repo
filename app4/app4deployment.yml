@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app4-deployment
+  labels:
+    app: app4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app4
+  template:
+    metadata:
+      labels:
+        app: app4
+    spec:
+      containers:
+      - name: app4
+        image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/snaveed1/newapp41:newapp41
+        ports:
+        - containerPort: 3004

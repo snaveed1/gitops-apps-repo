@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app6-service
+spec:
+  selector:
+    app: app6
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 30006
+  type: ClusterIP
