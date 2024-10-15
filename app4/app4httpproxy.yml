@@ -6,37 +6,9 @@ metadata:
 spec:
   virtualhost:
     fqdn: app4.swa-raj.online
-    tls:
-      secretName: swa-raj-cert-tls
-    corsPolicy:
-      allowCredentials: true
-      allowHeaders:
-        - '*'
-      allowMethods:
-        - GET
-        - POST
-        - OPTIONS
-        - DELETE
-        - PUT
-      allowOrigin:
-        - '*'
-      exposeHeaders:
-        - Content-Length
-        - Content-Range
-      maxAge: 10m
   routes:
     - conditions:
         - prefix: /
       services:
         - name: app4-service
           port: 80
-      loadBalancerPolicy:
-        strategy: WeightedLeastRequest
-      rateLimitPolicy:
-        global:
-          descriptors:
-            - entries:
-                - remoteAddress: {}
-      timeoutPolicy:
-        idle: infinity
-        response: infinity
