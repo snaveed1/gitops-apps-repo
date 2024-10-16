@@ -6,6 +6,8 @@ metadata:
 spec:
   virtualhost:
     fqdn: app6.swa-raj.online
+    tls:
+      secretName: app6-cert-tls
   routes:
     - conditions:
         - prefix: /
