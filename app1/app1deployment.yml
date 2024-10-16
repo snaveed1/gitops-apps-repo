@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/snaveed1/app1:7ef5430970aef51f34ca01a0a80566b20ec5fc4d
+        image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/snaveed1/app1:app1
         imagePullPolicy: Always
         ports:
         - containerPort: 3001
