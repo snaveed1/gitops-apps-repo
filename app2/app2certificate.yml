@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: app2-certificate
+  namespace: projectcontour
+spec:
+  commonName: app2.swa-raj.online
+  dnsNames:
+    - app2.swa-raj.online
+  issuerRef:
+    kind: ClusterIssuer
+    name: app2-clusterissuer  
+  secretName: app2-cert-tls  

@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: app4-certificate
+  namespace: projectcontour
+spec:
+  commonName: app4.swa-raj.online
+  dnsNames:
+    - app4.swa-raj.online
+  issuerRef:
+    kind: ClusterIssuer
+    name: app4-clusterissuer  
+  secretName: app4-cert-tls  
