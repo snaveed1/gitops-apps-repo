@@ -1,0 +1,5 @@
+image:
+  name: "${{ secrets.GCP_GAR_HOST }}/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPO }}/${{ secrets.GCP_IMAGE_NAME_2 }}"
+  tag: ""
+
+
