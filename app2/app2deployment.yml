@@ -16,8 +16,8 @@ spec:
         app: app2
     spec:
       containers:
-      - name: app2
-        image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/app2:app2
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 3002
+        - name: app2
+          image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/app2:524e468219fe044297b3c5768a425b5aa57f3290
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3002
