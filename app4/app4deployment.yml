@@ -16,7 +16,7 @@ spec:
         app: app4
     spec:
       containers:
-      - name: app4
-        image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/app4:app4
-        ports:
-        - containerPort: 3004
+        - name: app4
+          image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/app4:851b51ca7122ffd171cffe6ffa460d550294d6f9
+          ports:
+            - containerPort: 3004
