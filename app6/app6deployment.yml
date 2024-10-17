@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app6
-          image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/app6:d4cf27a0eedbf18143ceda21369f3b2629b34cc3
+          image: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/app6:4b3098a3df9a879015cda766cb3541f0ab86b24b
           imagePullPolicy: Always
           ports:
             - containerPort: 30006
