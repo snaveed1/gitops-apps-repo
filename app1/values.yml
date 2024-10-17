@@ -1,22 +1,18 @@
 # values.yaml for app1
 
 image:
-  name: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/app1
-  tag: ""  # This will be updated automatically with the commit ID.
-
+  name: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/snaveed1/app1
+  tag: "d0c84cd9c586a08ba9c928c833253d02b51c5056" # This will be updated automatically with the commit ID.
 service:
-  type: ClusterIP  # Service type (e.g., ClusterIP, NodePort, LoadBalancer)
-  port: 80  # Service port
-
+  type: ClusterIP # Service type (e.g., ClusterIP, NodePort, LoadBalancer)
+  port: 80 # Service port
 env:
-  APP_ENV: non-prod  # Application environment
-  API_URL: https://api1.swa-raj.online  # API URL specific to app1
-
+  APP_ENV: non-prod # Application environment
+  API_URL: https://api1.swa-raj.online # API URL specific to app1
 resources:
   requests:
-    memory: "256Mi"  # Minimum memory requested for each pod
-    cpu: "250m"  # Minimum CPU requested for each pod
+    memory: "256Mi" # Minimum memory requested for each pod
+    cpu: "250m" # Minimum CPU requested for each pod
   limits:
-    memory: "512Mi"  # Maximum memory allowed for each pod
-    cpu: "500m"  # Maximum CPU allowed for each pod
-
+    memory: "512Mi" # Maximum memory allowed for each pod
+    cpu: "500m" # Maximum CPU allowed for each pod
