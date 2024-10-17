@@ -1,5 +1,5 @@
 image:
-  name: "${{ secrets.GCP_GAR_HOST }}/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPO }}/${{ secrets.GCP_IMAGE_NAME_2 }}"
+  name: us-central1-docker.pkg.dev/naveed-project-438207/apps-images/app2
   tag: ""
 
 
