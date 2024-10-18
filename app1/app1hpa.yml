@@ -1,0 +1,26 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: app1-hpa
+  namespace: projectcontour
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: app1-deployment  # Targets this deployment
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 30
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300  # 5 min cooldown before scaling down
+      policies:
+      - type: Pods
+        value: 1
+        periodSeconds: 60  # No more than 1 pod removed per 60 seconds
